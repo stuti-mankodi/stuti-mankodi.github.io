@@ -7,6 +7,7 @@
   --text-dark: #2d2d2d;
 }
 
+/* Reset and base styles */
 body {
   margin: 0;
   font-family: 'Georgia', serif;
@@ -14,6 +15,7 @@ body {
   color: var(--text-dark);
 }
 
+/* Header and Navigation */
 header {
   display: flex;
   justify-content: space-between;
@@ -51,36 +53,42 @@ nav a:hover,
   color: var(--warm-purple);
 }
 
+/* Hero Section */
 .hero-section {
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(120deg, var(--peach) 65%, var(--warm-purple) 100%);
-  padding: 56px 0 56px 0;
+  padding: 56px 0;
   position: relative;
   min-height: 450px;
 }
 
+/* Circular Profile Image */
 .hero-image {
   position: relative;
-  width: 340px;
-  height: 340px;
+  width: 220px;
+  height: 220px;
   background: #fff;
-  border-radius: 5px;
+  border-radius: 50%;
   overflow: hidden;
   margin-right: 48px;
   box-shadow: 0 10px 40px rgba(158, 111, 190, 0.10);
-  border: 10px solid var(--warm-green);
+  border: 8px solid var(--warm-green);
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
 }
+
 .hero-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 50%;
+  display: block;
 }
 
+/* Hero Text */
 .hero-text {
   max-width: 420px;
   background: var(--light-peach);
@@ -127,6 +135,7 @@ nav a:hover,
   margin: 0;
 }
 
+/* Responsive Styles */
 @media (max-width: 900px) {
   .hero-section {
     flex-direction: column;
@@ -136,52 +145,16 @@ nav a:hover,
     margin: 0 0 32px 0;
   }
 }
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Arial, sans-serif;
-}
-
-header, nav {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 32px;
-}
-
-nav a {
-  margin: 0 12px;
-  font-size: 1.1rem;
-  text-decoration: none;
-  color: #222;
-}
-
-.hero-section {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 0;
-}
-
-.hero-image img {
-  width: 220px;
-  border-radius: 50%;
-  margin-right: 40px;
-}
-
-.hero-text {
-  max-width: 500px;
-}
 
 @media (max-width: 800px) {
   .hero-section {
     flex-direction: column;
     padding: 24px 0;
   }
-  .hero-image img {
-    margin: 0 0 24px 0;
+  .hero-image {
     width: 140px;
+    height: 140px;
+    margin: 0 0 24px 0;
   }
   .hero-text {
     text-align: center;
