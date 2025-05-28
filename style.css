@@ -5,6 +5,9 @@
   --light-bg: #fbf7f2;
   --light-peach: #fff2ea;
   --text-dark: #2d2d2d;
+  --dark-green: #144d56;
+  --mitti-color: #d0cbc7
+  --white: #ffffff
 }
 
 /* Reset and base styles */
@@ -195,7 +198,7 @@ nav a:hover,
 
 /* Contact Section Layout */
 .contact-section {
-  background: linear-gradient(120deg, var(--peach) 70%, var(--warm-purple) 100%);
+  background: var(--dark-green) 100%);
   padding: 56px 0 80px 0;
   display: flex;
   flex-direction: column;
