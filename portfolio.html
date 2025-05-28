@@ -4,26 +4,131 @@
   <meta charset="UTF-8">
   <title>Portfolio - Stuti Mankodi</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f7f9fa;
+      color: #222;
+    }
+    .resume-section {
+      max-width: 700px;
+      margin: 60px auto 0 auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+      padding: 40px 36px 36px 36px;
+    }
+    .resume-header {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+    .resume-header img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #eee;
+    }
+    .resume-header-info h1 {
+      margin: 0;
+      font-size: 2.1rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    .resume-header-info p {
+      margin: 5px 0 0 0;
+      font-size: 1.1rem;
+      color: #666;
+    }
+    .download-btn {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 12px 32px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      background: #1976d2;
+      color: #fff;
+      border: none;
+      border-radius: 36px;
+      text-decoration: none;
+      transition: background 0.2s;
+      box-shadow: 0 2px 8px rgba(25, 118, 210, 0.09);
+    }
+    .download-btn:hover {
+      background: #145ea8;
+    }
+    .resume-details {
+      margin-top: 30px;
+    }
+    .resume-details h2 {
+      margin-top: 0;
+      font-size: 1.3rem;
+      color: #1976d2;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+    .resume-details ul {
+      margin: 0 0 18px 16px;
+      padding: 0;
+      font-size: 1rem;
+      color: #444;
+    }
+    .resume-details li {
+      margin-bottom: 6px;
+    }
+    @media (max-width: 600px) {
+      .resume-section {
+        padding: 18px 6vw;
+      }
+      .resume-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+      }
+      .resume-header img {
+        width: 70px;
+        height: 70px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Portfolio</h1>
-    <nav>
+  <div class="resume-section">
+    <div class="resume-header">
+      <img src="images/profile.jpg" alt="Stuti Mankodi">
+      <div class="resume-header-info">
+        <h1>Stuti Mankodi</h1>
+        <p>Aspiring Web Developer & Designer</p>
+        <a class="download-btn" href="resume.pdf" download>Download Resume (PDF)</a>
+      </div>
+    </div>
+    <div class="resume-details">
+      <h2>Education</h2>
       <ul>
-        <li><a href="index.html">About Me</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="blogs.html">Blogs</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><strong>Bachelor of Science in Computer Science</strong>, XYZ University, 2022</li>
       </ul>
-    </nav>
-  </header>
-
-  <main>
-    <section>
-      <h2>Selected Work</h2>
-      <p>[Insert resume text here after you upload it.]</p>
-      <img src="images/portfolio-placeholder.jpg" alt="Portfolio Image" class="placeholder">
-    </section>
-  </main>
+      <h2>Skills</h2>
+      <ul>
+        <li>Web Development: HTML, CSS, JavaScript</li>
+        <li>UI/UX Design: Figma, Adobe XD</li>
+        <li>Version Control: Git & GitHub</li>
+        <li>Problem Solving & Communication</li>
+      </ul>
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>Personal Portfolio Website</strong> – Built and designed a responsive portfolio using HTML, CSS, and JavaScript.</li>
+        <li><strong>Blog Platform</strong> – Developed a simple blog platform to share tech articles.</li>
+      </ul>
+      <h2>Contact</h2>
+      <ul>
+        <li>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
+        <li>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">yourprofile</a></li>
+      </ul>
+    </div>
+  </div>
 </body>
 </html>
