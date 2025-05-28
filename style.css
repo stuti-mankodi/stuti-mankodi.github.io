@@ -17,7 +17,7 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   padding: 32px 60px 24px 60px;
   background: var(--white);
   border-bottom: 2px solid var(--mitti-color);
@@ -33,25 +33,87 @@ header {
 
 nav {
   display: flex;
-  align-items: flex-start;
-  margin-top: 0.15em;
+  align-items: center;
+  gap: 16px;
 }
 
-nav a, .dropdown > a {
-  margin: 0 12px;
+nav > a,
+nav > .dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  font-size: 1rem;
+  height: 40px;
+}
+
+nav a {
   color: var(--dark-green);
   text-decoration: none;
-  font-size: 1rem;
   font-family: 'Georgia', serif;
   font-weight: 500;
   transition: color 0.2s;
-  padding: 4px 0;
   border-bottom: 2px solid transparent;
 }
+
 nav a:hover,
 .dropdown > a:hover {
   color: var(--mitti-color);
   border-bottom: 2px solid var(--dark-green);
+}
+
+.dropdown > a {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: var(--white);
+  box-shadow: 0 4px 16px rgba(20,77,86,0.10);
+  border-radius: 0 0 8px 8px;
+  min-width: 170px;
+  z-index: 100;
+  padding: 10px 0;
+  margin: 0;
+  list-style: none;
+}
+
+.dropdown-menu li {
+  width: 100%;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 18px;
+  color: var(--dark-green);
+  text-decoration: none;
+  transition: background 0.2s;
+  font-size: 1rem;
+}
+
+.dropdown-menu li a:hover {
+  background: var(--mitti-color);
+  color: var(--dark-green);
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+
+@media (max-width: 700px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav > a,
+  nav > .dropdown {
+    width: 100%;
+    padding: 8px 0;
+  }
 }
 
 /* Hero Section */
