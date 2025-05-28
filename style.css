@@ -1,20 +1,15 @@
 :root {
-  --peach: #ffd6c0;
-  --warm-purple: #9e6fbe;
-  --warm-green: #b7c59c;
-  --light-bg: #fbf7f2;
-  --light-peach: #fff2ea;
-  --text-dark: #2d2d2d;
   --dark-green: #144d56;
-  --mitti-color: #d0cbc7
-  --white: #ffffff
+  --mitti-color: #d0cbc7;
+  --white: #ffffff;
+  --text-dark: #144d56;
 }
 
 /* Reset and base styles */
 body {
   margin: 0;
   font-family: 'Georgia', serif;
-  background: var(--light-bg);
+  background: var(--mitti-color);
   color: var(--text-dark);
 }
 
@@ -24,15 +19,15 @@ header {
   justify-content: space-between;
   align-items: flex-start;
   padding: 32px 60px 24px 60px;
-  background: #fff;
-  border-bottom: 1px solid #eee;
+  background: var(--white);
+  border-bottom: 2px solid var(--mitti-color);
 }
 
 .logo {
   font-size: 2.2rem;
   font-family: 'Times New Roman', serif;
   letter-spacing: 1px;
-  color: var(--warm-purple);
+  color: var(--dark-green);
   margin-top: 0.2em;
 }
 
@@ -44,16 +39,19 @@ nav {
 
 nav a, .dropdown > a {
   margin: 0 12px;
-  color: var(--text-dark);
+  color: var(--dark-green);
   text-decoration: none;
   font-size: 1rem;
   font-family: 'Georgia', serif;
   font-weight: 500;
   transition: color 0.2s;
+  padding: 4px 0;
+  border-bottom: 2px solid transparent;
 }
 nav a:hover,
 .dropdown > a:hover {
-  color: var(--warm-purple);
+  color: var(--mitti-color);
+  border-bottom: 2px solid var(--dark-green);
 }
 
 /* Hero Section */
@@ -61,23 +59,19 @@ nav a:hover,
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(120deg, var(--peach) 65%, var(--warm-purple) 100%);
+  background: var(--dark-green);
   padding: 56px 0;
   position: relative;
-  min-height: 450px;
+  min-height: 400px;
 }
 
-/* Circular Profile Image */
 .hero-image {
-  width: 350px;
-  height: 350px;
+  width: 320px;
+  height: 320px;
   border-radius: 50%;
   overflow: hidden;
   margin-right: 48px;
-  /* Remove background, border, and box-shadow */
-  background: none;
-  border: none;
-  box-shadow: none;
+  background: var(--mitti-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -91,6 +85,7 @@ nav a:hover,
   display: block;
   border: none;
 }
+
 @media (max-width: 800px) {
   .hero-image {
     width: 140px;
@@ -102,18 +97,18 @@ nav a:hover,
 /* Hero Text */
 .hero-text {
   max-width: 420px;
-  background: var(--light-peach);
+  background: var(--white);
   padding: 40px 32px;
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(158, 111, 190, 0.03);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(20,77,86,0.06);
   position: relative;
-  border-left: 7px solid var(--warm-purple);
+  border-left: 7px solid var(--dark-green);
 }
 
 .hey-there {
   display: block;
   font-family: 'Brush Script MT', cursive;
-  color: var(--warm-purple);
+  color: var(--dark-green);
   font-size: 1.2rem;
   margin-bottom: 0.6rem;
 }
@@ -122,27 +117,18 @@ nav a:hover,
   font-size: 2.1rem;
   font-weight: 400;
   margin: 0 0 0.7rem 0;
-  line-height: 1.1;
+  line-height: 1.15;
   position: relative;
-  color: var(--text-dark);
+  color: var(--dark-green);
 }
 .hero-text h1::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 18px;
-  background: var(--peach);
-  position: absolute;
-  left: 0;
-  bottom: 10px;
-  z-index: -1;
-  opacity: 0.6;
+  display: none;
 }
 
 .hero-text p {
   font-family: 'Georgia', serif;
   font-size: 1rem;
-  color: var(--warm-purple);
+  color: var(--dark-green);
   margin: 0;
 }
 
@@ -183,22 +169,12 @@ nav a:hover,
     font-size: 1rem;
   }
 }
-/* =================== Contact Form Styles =================== */
 
-```css
-/* Root color variables */
-:root {
-  --peach: #ffd6c0;
-  --warm-purple: #9e6fbe;
-  --warm-green: #b7c59c;
-  --light-bg: #fbf7f2;
-  --light-peach: #fff2ea;
-  --text-dark: #2d2d2d;
-}
+/* =================== Contact Form Styles =================== */
 
 /* Contact Section Layout */
 .contact-section {
-  background: var(--dark-green) 100%);
+  background: var(--dark-green);
   padding: 56px 0 80px 0;
   display: flex;
   flex-direction: column;
@@ -211,15 +187,16 @@ nav a:hover,
 }
 
 .contact-intro h2 {
-  color: var(--warm-purple);
+  color: var(--white);
   font-size: 2.3rem;
   margin-bottom: 0.4em;
   font-family: 'Georgia', serif;
   font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .contact-intro p {
-  color: var(--text-dark);
+  color: var(--mitti-color);
   font-size: 1.08rem;
   margin: 0 auto;
   max-width: 550px;
@@ -229,9 +206,9 @@ nav a:hover,
 .contact-container {
   display: flex;
   gap: 32px;
-  background: #fff;
+  background: var(--white);
   border-radius: 14px;
-  box-shadow: 0 4px 32px rgba(158, 111, 190, 0.07), 0 1.5px 8px rgba(183, 197, 156, 0.09);
+  box-shadow: 0 4px 32px rgba(20, 77, 86, 0.04), 0 1.5px 8px rgba(208, 203, 199, 0.08);
   padding: 36px 40px 32px 40px;
   max-width: 850px;
   width: 100%;
@@ -248,14 +225,14 @@ nav a:hover,
 
 /* Contact Info (Left box) */
 .contact-info {
-  background: var(--warm-purple);
-  color: #fff;
+  background: var(--mitti-color);
+  color: var(--dark-green);
   border-radius: 8px;
   padding: 30px 28px;
   flex: 0 0 260px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 2px 18px rgba(158, 111, 190, 0.10);
+  box-shadow: 0 2px 18px rgba(20, 77, 86, 0.06);
 }
 
 .contact-info h3 {
@@ -264,13 +241,13 @@ nav a:hover,
   font-size: 1.15rem;
   font-weight: bold;
   letter-spacing: 0.5px;
-  color: #fff;
+  color: var(--dark-green);
   font-family: 'Georgia', serif;
 }
 
 .contact-info p {
   margin-bottom: 24px;
-  color: var(--peach);
+  color: var(--dark-green);
   font-size: 1rem;
 }
 
@@ -285,22 +262,22 @@ nav a:hover,
   display: flex;
   align-items: center;
   font-size: 1rem;
-  color: #fff;
+  color: var(--dark-green);
 }
 
 .contact-info .icon {
   margin-right: 10px;
   font-size: 1.3em;
-  color: var(--peach);
+  color: var(--dark-green);
 }
 
 .contact-info a {
-  color: #fff;
-  text-decoration: underline dotted var(--peach);
+  color: var(--dark-green);
+  text-decoration: underline dotted var(--dark-green);
   transition: color 0.2s;
 }
 .contact-info a:hover {
-  color: var(--peach);
+  color: var(--white);
 }
 
 /* Contact Form (Right box) */
@@ -330,7 +307,7 @@ nav a:hover,
 
 .contact-form label {
   font-size: 1rem;
-  color: var(--warm-purple);
+  color: var(--dark-green);
   font-weight: 600;
   margin-bottom: 5px;
   font-family: 'Georgia', serif;
@@ -341,20 +318,21 @@ nav a:hover,
 .contact-form textarea {
   font-family: 'Georgia', serif;
   font-size: 1rem;
-  background: var(--light-peach);
-  border: 1.5px solid var(--warm-purple);
+  background: var(--mitti-color);
+  border: 1.5px solid var(--dark-green);
   border-radius: 6px;
   padding: 11px 13px;
-  color: var(--text-dark);
+  color: var(--dark-green);
   outline: none;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, background 0.2s;
   margin-bottom: 2px;
   resize: none;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: var(--warm-green);
+  border-color: var(--dark-green);
+  background: var(--white);
 }
 
 .contact-form textarea {
@@ -363,8 +341,8 @@ nav a:hover,
 }
 
 .contact-submit {
-  background: var(--warm-purple);
-  color: #fff;
+  background: var(--dark-green);
+  color: var(--white);
   font-family: 'Georgia', serif;
   font-size: 1.08rem;
   font-weight: bold;
@@ -374,13 +352,13 @@ nav a:hover,
   margin-top: 8px;
   cursor: pointer;
   transition: background 0.18s, color 0.18s;
-  box-shadow: 0 1.5px 6px rgba(183, 197, 156, 0.13);
+  box-shadow: 0 1.5px 6px rgba(20, 77, 86, 0.09);
 }
 
 .contact-submit:hover,
 .contact-submit:focus {
-  background: var(--warm-green);
-  color: var(--warm-purple);
+  background: var(--mitti-color);
+  color: var(--dark-green);
 }
 
 @media (max-width: 600px) {
