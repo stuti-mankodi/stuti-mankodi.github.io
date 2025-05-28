@@ -66,8 +66,8 @@ nav a:hover,
 
 /* Circular Profile Image */
 .hero-image {
-  width: 220px;
-  height: 220px;
+  width: 280px;
+  height: 280px;
   border-radius: 50%;
   overflow: hidden;
   margin-right: 48px;
