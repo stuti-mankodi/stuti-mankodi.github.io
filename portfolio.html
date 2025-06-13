@@ -1,135 +1,755 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="UTF-8">
-  <title>Portfolio - Stuti Mankodi</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f7f9fa;
-      color: #222;
-    }
-    .resume-section {
-      max-width: 700px;
-      margin: 60px auto 0 auto;
-      background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.07);
-      padding: 40px 36px 36px 36px;
-    }
-    .resume-header {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-      margin-bottom: 24px;
-    }
-    .resume-header img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #eee;
-    }
-    .resume-header-info h1 {
-      margin: 0;
-      font-size: 2.1rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
-    .resume-header-info p {
-      margin: 5px 0 0 0;
-      font-size: 1.1rem;
-      color: #666;
-    }
-    .download-btn {
-      display: inline-block;
-      margin-top: 24px;
-      padding: 12px 32px;
-      font-size: 1.1rem;
-      font-weight: 600;
-      background: #1976d2;
-      color: #fff;
-      border: none;
-      border-radius: 36px;
-      text-decoration: none;
-      transition: background 0.2s;
-      box-shadow: 0 2px 8px rgba(25, 118, 210, 0.09);
-    }
-    .download-btn:hover {
-      background: #145ea8;
-    }
-    .resume-details {
-      margin-top: 30px;
-    }
-    .resume-details h2 {
-      margin-top: 0;
-      font-size: 1.3rem;
-      color: #1976d2;
-      letter-spacing: 1px;
-      margin-bottom: 10px;
-    }
-    .resume-details ul {
-      margin: 0 0 18px 16px;
-      padding: 0;
-      font-size: 1rem;
-      color: #444;
-    }
-    .resume-details li {
-      margin-bottom: 6px;
-    }
-    @media (max-width: 600px) {
-      .resume-section {
-        padding: 18px 6vw;
-      }
-      .resume-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 14px;
-      }
-      .resume-header img {
-        width: 70px;
-        height: 70px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stuti Mankodi - Environmental Sustainability Professional</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 2rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .profile-section {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-info h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .profile-info p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            background: #f8f9fa;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        main {
+            padding: 3rem 0;
+        }
+
+        .section {
+            background: white;
+            margin: 2rem 0;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #333;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        .experience-grid {
+            display: grid;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .experience-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .experience-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .experience-card h3 {
+            color: #667eea;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-card .company {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-card .date {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .experience-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .experience-card li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .experience-card li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .skill-category {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .skill-category h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+
+        .skill-tag {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 3rem;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+            animation: modalSlideIn 0.3s ease;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .close {
+            position: absolute;
+            right: 2rem;
+            top: 2rem;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            color: #999;
+            transition: color 0.3s ease;
+        }
+
+        .close:hover {
+            color: #333;
+        }
+
+        .resume-section {
+            font-family: 'Times New Roman', serif;
+            line-height: 1.4;
+            color: #333;
+        }
+
+        .resume-header {
+            text-align: center;
+            border-bottom: 2px solid #333;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .resume-header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .resume-section h3 {
+            color: #667eea;
+            font-size: 1.2rem;
+            margin: 1.5rem 0 0.5rem 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.3rem;
+        }
+
+        .resume-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .resume-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .resume-item h4 {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .resume-item .company {
+            font-style: italic;
+            color: #666;
+        }
+
+        .resume-item .date {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .profile-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-info h1 {
+                font-size: 2rem;
+            }
+
+            .section {
+                padding: 2rem 1rem;
+            }
+
+            .modal-content {
+                margin: 10% auto;
+                padding: 2rem;
+            }
+        }
+
+        .highlight-link {
+            color: #667eea;
+            text-decoration: underline;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .highlight-link:hover {
+            color: #764ba2;
+        }
+    </style>
 </head>
 <body>
-  <div class="resume-section">
-    <div class="resume-header">
-      <img src="images/profile.jpg" alt="Stuti Mankodi">
-      <div class="resume-header-info">
-        <h1>Stuti Mankodi</h1>
-        <p>Aspiring Web Developer & Designer</p>
-        <a class="download-btn" href="resume.pdf" download>Download Resume (PDF)</a>
-      </div>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="profile-section">
+                    <div class="profile-image">SM</div>
+                    <div class="profile-info">
+                        <h1>Stuti Mankodi</h1>
+                        <p>Environmental Sustainability Professional</p>
+                        <div class="contact-info">
+                            <div class="contact-item">📧 stutimankodi3@gmail.com</div>
+                            <div class="contact-item">📱 +1 (267) 984-5417</div>
+                            <div class="contact-item">💼 <a href="https://www.linkedin.com/in/stuti-mankodi/" target="_blank" style="color: inherit; text-decoration: none;">LinkedIn</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-buttons">
+                    <button class="btn btn-primary" onclick="downloadResume()">Download Resume</button>
+                    <button class="btn btn-secondary" onclick="showResume()">View Resume</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="section">
+                <h2>About Me</h2>
+                <p style="font-size: 1.1rem; line-height: 1.8;">
+                    I'm a passionate environmental sustainability professional currently pursuing my Master of Environmental Studies at the University of Pennsylvania. With a strong background in research, policy analysis, and community engagement, I focus on creating meaningful solutions to environmental challenges. My experience spans from grassroots rural development to corporate ESG consulting, always with a commitment to building a more sustainable future.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2>Featured Projects & Experience</h2>
+                <div class="experience-grid">
+                    <div class="experience-card" onclick="showModal('sbi-fellowship')">
+                        <h3>SBI Youth for India Fellowship</h3>
+                        <div class="company">Rural Development Initiative, Odisha</div>
+                        <div class="date">September 2020 – September 2021</div>
+                        <ul>
+                            <li>Established library-classroom in rural village</li>
+                            <li>Implemented solid waste management system</li>
+                            <li>Conducted educational campaigns on health and environment</li>
+                        </ul>
+                        <p style="margin-top: 1rem; color: #667eea; font-weight: 500;">Click for detailed project overview →</p>
+                    </div>
+
+                    <div class="experience-card" onclick="showModal('climate-research')">
+                        <h3>Climate Change Research on Farmers</h3>
+                        <div class="company">Academic Dissertation, Rajasthan</div>
+                        <div class="date">February 2019</div>
+                        <ul>
+                            <li>Qualitative research on climate impacts</li>
+                            <li>Field observations and farmer interviews</li>
+                            <li>Policy recommendations for water management</li>
+                        </ul>
+                        <p style="margin-top: 1rem; color: #667eea; font-weight: 500;">Click for research abstract →</p>
+                    </div>
+
+                    <div class="experience-card" onclick="showModal('quest-solutions')">
+                        <h3>ESG Research & Analysis</h3>
+                        <div class="company">Quest Sustainable Solutions, Bangalore</div>
+                        <div class="date">January 2022 – February 2024</div>
+                        <ul>
+                            <li>Analyzed 77 industries under SASB framework</li>
+                            <li>Co-authored SME sustainability white paper</li>
+                            <li>Developed educational modules for students</li>
+                        </ul>
+                        <p style="margin-top: 1rem; color: #667eea; font-weight: 500;">Click for detailed work overview →</p>
+                    </div>
+
+                    <div class="experience-card" onclick="showModal('penn-work')">
+                        <h3>Current Work at Penn</h3>
+                        <div class="company">Multiple Initiatives</div>
+                        <div class="date">2024 – Present</div>
+                        <ul>
+                            <li>Environmental Science Facilitator at Community Schools</li>
+                            <li>Teaching Assistant for Climate Justice Program</li>
+                            <li>Environmental Innovations Initiative Student Worker</li>
+                        </ul>
+                        <p style="margin-top: 1rem; color: #667eea; font-weight: 500;">Click for current projects →</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Skills & Expertise</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Technical Skills</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">MS Office Suite</span>
+                            <span class="skill-tag">Adobe Illustrator</span>
+                            <span class="skill-tag">Data Analysis</span>
+                            <span class="skill-tag">Research Methods</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Sustainability</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">ESG Analysis</span>
+                            <span class="skill-tag">Climate Research</span>
+                            <span class="skill-tag">Waste Management</span>
+                            <span class="skill-tag">Policy Development</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Communication</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Content Development</span>
+                            <span class="skill-tag">Social Media</span>
+                            <span class="skill-tag">Public Relations</span>
+                            <span class="skill-tag">Educational Training</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Languages</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">English</span>
+                            <span class="skill-tag">Japanese (N5)</span>
+                            <span class="skill-tag">Hindi</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Modals -->
+    <div id="resumeModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('resumeModal')">&times;</span>
+            <div class="resume-section">
+                <div class="resume-header">
+                    <h1>Stuti Mankodi</h1>
+                    <p>+1 (267) 984 – 5417 | stutimankodi3@gmail.com | <a href="https://www.linkedin.com/in/stuti-mankodi/" target="_blank">LinkedIn Profile</a></p>
+                </div>
+
+                <h3>Education</h3>
+                <div class="resume-item">
+                    <div class="resume-item-header">
+                        <div>
+                            <h4>University of Pennsylvania</h4>
+                            <div class="company">Master of Environmental Studies – GPA 4/4</div>
+                        </div>
+                        <div class="date">Expected August 2026</div>
+                    </div>
+                </div>
+                <div class="resume-item">
+                    <div class="resume-item-header">
+                        <div>
+                            <h4>Pandit Deendayal Petroleum University</h4>
+                            <div class="company">Bachelor of Arts (Honors) in Mass Communication – GPA: 3.65/4</div>
+                            <div class="company">Minor: Corporate Communication</div>
+                        </div>
+                        <div class="date">July 2015 – May 2019</div>
+                    </div>
+                </div>
+
+                <h3>Sustainability Experience</h3>
+                <div class="resume-item">
+                    <div class="resume-item-header">
+                        <div>
+                            <h4>Environmental Science Facilitator</h4>
+                            <div class="company">Netter Center – Water Center Community Schools</div>
+                        </div>
+                        <div class="date">June 2025 - Present</div>
+                    </div>
+                    <ul>
+                        <li>Coordinating environmental studies program in the Robeson High School across summer</li>
+                    </ul>
+                </div>
+
+                <div class="resume-item">
+                    <div class="resume-item-header">
+                        <div>
+                            <h4>Teaching Assistant</h4>
+                            <div class="company">Project-Based Learning for Global Climate Justice at Penn</div>
+                        </div>
+                        <div class="date">May 2025 – Present</div>
+                    </div>
+                    <ul>
+                        <li>Leading the summer module on "Food and Climate", conducting recorded interviews on the topic with experts across Penn.</li>
+                    </ul>
+                </div>
+
+                <div class="resume-item">
+                    <div class="resume-item-header">
+                        <div>
+                            <h4>Student Worker</h4>
+                            <div class="company">Environmental Innovations Initiative at Penn</div>
+                        </div>
+                        <div class="date">October 2024 – Present</div>
+                    </div>
+                    <ul>
+                        <li>Interviewing experts at Penn for the monthly newsletter, highlighting their climate research.</li>
+                        <li>Developing social media posts about climate and environment-related events at Penn.</li>
+                    </ul>
+                </div>
+
+                <div class="resume-item">
+                    <div class="resume-item-header">
+                        <div>
+                            <h4>Member</h4>
+                            <div class="company">Penn Sustainability Consulting Club</div>
+                        </div>
+                        <div class="date">September 2024 – December 2025</div>
+                    </div>
+                    <ul>
+                        <li>Restructured the waste management standards set by SWEEP to match those of Penn's campus requirements.</li>
+                    </ul>
+                </div>
+
+                <div class="resume-item">
+                    <div class="resume-item-header">
+                        <div>
+                            <h4>Research Analyst</h4>
+                            <div class="company">Quest Sustainable Solutions, Bangalore</div>
+                        </div>
+                        <div class="date">April 2022 – February 2024</div>
+                    </div>
+                    <ul>
+                        <li>Analyzed 77 industries under SASB, and assessed and addressed their ESG requirements and challenges.</li>
+                        <li>Evaluated ESG reports of companies from diverse industries and modified their ESG policies.</li>
+                        <li>Conceptualized and developed social media posts and website illustrations using Adobe Illustrator.</li>
+                    </ul>
+                </div>
+
+                <h3>Rural Development Experience</h3>
+                <div class="resume-item">
+                    <div class="resume-item-header">
+                        <div>
+                            <h4>Fellowship</h4>
+                            <div class="company">SBI Youth for India, Odisha | <span class="highlight-link" onclick="showModal('sbi-fellowship')">Synopsis</span></div>
+                        </div>
+                        <div class="date">September 2020 – September 2021</div>
+                    </div>
+                    <ul>
+                        <li>Established a library-classroom in Jangyashala, a village in Ganjam district, Odisha.</li>
+                        <li>Lead reading sessions for children, inculcating reading habit.</li>
+                        <li>Conducted educational campaigns on topics such as menstruation and waste management.</li>
+                        <li>Implemented a solid waste management system in the village as a part of the Swachh Bharat Mission (Clean India Mission) Policy by engaging the district and community level stakeholders.</li>
+                    </ul>
+                </div>
+
+                <h3>Academic Dissertation</h3>
+                <div class="resume-item">
+                    <div class="resume-item-header">
+                        <div>
+                            <h4>Effects of Climate Change on Farmers in Bankra, Rajasthan</h4>
+                            <div class="company"><span class="highlight-link" onclick="showModal('climate-research')">Abstract</span></div>
+                        </div>
+                        <div class="date">February 2019</div>
+                    </div>
+                    <ul>
+                        <li>Conducted qualitative research in Bankra village, Rajasthan, on the impact of climate change-induced drought and water scarcity on farmers' livelihoods using interviews and field observations.</li>
+                        <li>Identified key challenges, including insufficient irrigation facilities, water scarcity from inadequate dam rerouting, and financial strain faced by farmers; proposed rerouting dam water as a potential solution.</li>
+                    </ul>
+                </div>
+
+                <h3>Skills & Certifications</h3>
+                <div class="resume-item">
+                    <ul>
+                        <li>MS Office Suite (Advanced)</li>
+                        <li>Adobe Illustrator (Intermediate)</li>
+                        <li>Japanese Language Proficiency Test N5 Certified</li>
+                        <li>Green Revolution Global Program Certified</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="resume-details">
-      <h2>Education</h2>
-      <ul>
-        <li><strong>Bachelor of Science in Computer Science</strong>, XYZ University, 2022</li>
-      </ul>
-      <h2>Skills</h2>
-      <ul>
-        <li>Web Development: HTML, CSS, JavaScript</li>
-        <li>UI/UX Design: Figma, Adobe XD</li>
-        <li>Version Control: Git & GitHub</li>
-        <li>Problem Solving & Communication</li>
-      </ul>
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>Personal Portfolio Website</strong> – Built and designed a responsive portfolio using HTML, CSS, and JavaScript.</li>
-        <li><strong>Blog Platform</strong> – Developed a simple blog platform to share tech articles.</li>
-      </ul>
-      <h2>Contact</h2>
-      <ul>
-        <li>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
-        <li>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">yourprofile</a></li>
-      </ul>
+
+    <!-- Project Detail Modals -->
+    <div id="sbi-fellowship" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('sbi-fellowship')">&times;</span>
+            <h2>SBI Youth for India Fellowship - Project Synopsis</h2>
+            <p><strong>Location:</strong> Jangyashala Village, Ganjam District, Odisha</p>
+            <p><strong>Duration:</strong> September 2020 – September 2021</p>
+            
+            <h3>Project Overview</h3>
+            <p>The SBI Youth for India Fellowship was a comprehensive rural development initiative focused on education, health awareness, and environmental sustainability. Working directly with the local community, I implemented multiple interconnected programs to address the village's most pressing needs.</p>
+            
+            <h3>Key Achievements</h3>
+            <ul>
+                <li><strong>Library-Classroom Establishment:</strong> Created a dedicated learning space that served as both a library and classroom for children in the village, providing access to educational resources previously unavailable.</li>
+                <li><strong>Reading Program:</strong> Organized regular reading sessions to promote literacy and cultivate reading habits among children, significantly improving their engagement with learning.</li>
+                <li><strong>Health Education Campaigns:</strong> Conducted awareness campaigns on critical health topics including menstrual hygiene, addressing taboos and providing practical education to women and girls.</li>
+                <li><strong>Waste Management System:</strong> Successfully implemented a comprehensive solid waste management system as part of the Swachh Bharat Mission, engaging both district officials and community stakeholders.</li>
+            </ul>
+            
+            <h3>Impact</h3>
+            <p>This fellowship provided direct experience in grassroots development work, community engagement, and the practical implementation of sustainability initiatives. The project demonstrated the importance of collaborative approaches that involve local stakeholders in creating lasting change.</p>
+        </div>
     </div>
-  </div>
-</body>
-</html>
+
+    <div id="climate-research" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('climate-research')">&times;</span>
+            <h2>Climate Change Research - Abstract</h2>
+            <p><strong>Title:</strong> Effects of Climate Change on Farmers in Bankra, Rajasthan</p>
+            <p><strong>Research Period:</strong> February 2019</p>
+            <p><strong>Methodology:</strong> Qualitative Research with Field Observations</p>
+            
+            <h3>Research Objective</h3>
+            <p>This study investigated the multifaceted impacts of climate change-induced drought and water scarcity on the livelihoods of farming communities in Bankra village, Rajasthan. The research aimed to understand the direct and indirect effects of changing climate patterns on agricultural practices and farmer welfare.</p>
+            
+            <h3>Methodology</h3>
+            <p>The research employed qualitative methods including in-depth interviews with local farmers and extensive field observations. This approach allowed for a comprehensive understanding of both the immediate challenges and long-term adaptations farmers have made in response to climate change.</p>
+            
+            <h3>Key Findings</h3>
+            <ul>
+                <li><strong>Insufficient Irrigation Infrastructure:</strong> Farmers lack adequate irrigation facilities to cope with increasingly irregular rainfall patterns.</li>
+                <li><strong>Water Scarcity Issues:</strong> Poor dam water management and inadequate rerouting systems have exacerbated water availability problems.</li>
+                <li><strong>Financial Strain:</strong> Climate-related crop failures and reduced yields have placed significant economic pressure on farming families.</li>
+                <li><strong>Adaptive Strategies:</strong> Farmers have developed various coping mechanisms, though many require additional support and resources.</li>
+            </ul>
+            
+            <h3>Recommendations</h3>
+            <p>The research proposed strategic dam water rerouting as a primary solution, along with improved irrigation infrastructure and climate-resilient farming practices. These findings contributed to broader discussions on climate adaptation strategies for rural agricultural communities.</p>
+        </div>
+    </div>
+
+    <div id="quest-solutions" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('quest-solutions')">&times;</span>
+            <h2>Quest Sustainable Solutions - Work Overview</h2>
+            <p><strong>Company:</strong> Quest Sustainable Solutions, Bangalore</p>
+            <p><strong>Positions:</strong> Research Intern (Jan-Mar 2022), Research Analyst (Apr 2022-Feb 2024)</p>
+            
+            <h3>Company Background</h3>
+            <p>Quest Sustainable Solutions is a leading sustainability consulting firm specializing in ESG (Environmental, Social, and Governance) frameworks and sustainable business practices. The company works with organizations across various industries to develop and implement comprehensive sustainability strategies.</p>
+            
+            <h3>Key Responsibilities & Achievements</h3>
+            
+            <h4>Research Analyst Role</h4>
+            <ul>
+                <li><strong>Industry Analysis:</strong> Conducted comprehensive analysis of 77 industries under the SASB (Sustainability Accounting Standards Board) framework, identifying specific ESG requirements and challenges for each sector.</li>
+                <li><strong>ESG Report Evaluation:</strong> Reviewed and assessed ESG reports from companies across diverse industries, providing recommendations for policy improvements and compliance enhancement.</li>
+                <li><strong>Creative Development:</strong> Designed social media content and website illustrations using Adobe Illustrator to communicate complex sustainability concepts to diverse audiences.</li>
+            </ul>
+            
+            <h4>Research Intern Projects</h4>
+            <ul>
+                <li><strong>SME White Paper:</strong> Co-authored "Sustainability Spotlight on Small & Medium Enterprises," a comprehensive guide helping SMEs understand and achieve their ESG targets.</li>
+                <li><strong>Educational Module Development:</strong> Created interactive educational content on environmental topics for middle school students as part of the company's community outreach program.</li>
+                <li><strong>Teaching and Outreach:</strong> Directly taught environmental education modules to middle school students, bridging the gap between technical knowledge and accessible learning.</li>
+            </ul>
+            
+            <h3>Skills Developed</h3>
+            <p>This experience provided deep expertise in ESG frameworks, industry analysis, policy development, and the practical application of sustainability principles across diverse business contexts. The role also enhanced technical skills in research methodology, data analysis, and visual communication design.</p>
+        </div>
+    </div>
+
+    <div id="penn-work" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('penn-work')">&times;</span>
+            <h2>Current Work at University of Pennsylvania</h2>
+            <p><strong>Institution:</strong> University of Pennsylvania</p>
+            <p><strong>Period:</strong> October 2024 – Present</p>
